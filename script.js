@@ -43,7 +43,7 @@ function watchForm() {
     const baseURL = 'https://developer.nps.gov/api/v1/parks';
     const states = $('#js-search-state').val().replace(/\s/g, "").split(",");
     const maxResults = $('#js-max-results').val();
-    const apiKey = 'aQX1RxrfLOyb5OsKOjkFaSZLQZgHq53mFaETWrmd';
+    const apiKey = 'INSERT API KEY HERE';
     getParks(baseURL, states, maxResults, apiKey);
   });
 }
