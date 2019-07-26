@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title>National Parks Search App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>National Parks Search App</h1>
+        </header>
+        <section class="search">
+            <form id="js-form">
+                <div class="labels">
+                    <label for="search-state">SEARCH STATE(S)</label>
+                    <label for="max-results">MAX RESULTS</label>
+                </div>
+                <div class="inputs">
+                    <input type="text" name="search-state" id="js-search-state" placeholder="enter state code(s)" required>
+                    <input type="number" name="max-results" id="js-max-results" placeholder="example: 10" max="50" required>
+                </div>
+                <input type="submit" class="submit" value="search">
+                <p>Note: use commas to separate multiple state codes.</p>
+            </form>
+            <div id="js-error-message"></div>
+        </section>
+        <section class="results hidden">
+            <h2 id="js-state-display">Parks:</h2>
+            <ul id="js-parks-display">
+            </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
