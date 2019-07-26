@@ -33,12 +33,14 @@ function displayResults(responseJson) {
     </li>`);
     $('#js-state-display').html(`${responseJson.total} parks found (${responseJson.data.length} displayed):`);
   }
+  $('#loading').addClass('hidden');
   $('.results').removeClass('hidden');
 }
 
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
+    $('#loading').removeClass('hidden');
     $('.results').addClass('hidden');
     const baseURL = 'https://developer.nps.gov/api/v1/parks';
     const states = $('#js-search-state').val().replace(/\s/g, "").split(",");
